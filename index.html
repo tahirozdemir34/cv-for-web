@@ -24,6 +24,17 @@
          dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
          dd { width: 600px; float: right; }
          dd.clear { float: none; margin: 0; height: 15px; }
+		 .column {
+		  float: left;
+		  width: 50%;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
       </style>
    </head>
    <body>
@@ -31,7 +42,16 @@
          <!-- <img src="rsz_crop.png" alt="Profile Picture" id="pic" /> -->
          <div id="contact-info" class="vcard">
             <!-- Microformats! -->
-            <h1 class="fn">Tahir Özdemir</h1>
+			<div class="row">
+			  <div class="column"><h1 class="fn">Tahir Özdemir</h1></div>
+			  <div class="column" align="right">
+				  <a href="./tahir_ozdemir_cv.pdf">
+					<img src="https://www.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png" alt="Download as PDF">
+					
+				  </a>
+			  </div>
+			</div>
+            
             <p>
                Web: <a href="http://me.tahirozdemir.com" target="_blank">me.tahirozdemir.com</a><br />
                GitHub: <a href="https://github.com/tahirozdemir34" target="_blank">github.com/tahirozdemir34</a><br />
